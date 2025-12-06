@@ -170,6 +170,7 @@ VIET_NORMALIZATION_DICT = {
         "nhung": "nhưng",
 
         # Các từ cơ bản
+        "co": "có",
         "duoc": "được",
         "du": "đủ",
         "thoi": "thôi",
@@ -210,7 +211,8 @@ VIET_NORMALIZATION_DICT = {
         "lon": "lớn",
         "nhe": "nhẹ",
         "man": "mặn",
-        "ngot": "ngọt",   
+        "ngot": "ngọt",  
+        "lam": "lắm" 
 }
 
 def is_valid_vietnamese(text: str) -> bool:
@@ -231,9 +233,7 @@ def is_valid_vietnamese(text: str) -> bool:
 
     # Tách từ bằng Underthesea
     words = word_tokenize(text, format="list")  # Tách từ, trả về danh sách các từ
-
-    # Lọc chỉ các từ chứa chữ cái (loại bỏ số, dấu câu, v.v.)
-    words = [word for word in words if word.isalpha()]
+    print("Từ sau khi tách:", words)
 
     # Phải có ít nhất 2 từ
     if len(words) < 2:
