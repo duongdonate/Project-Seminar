@@ -72,8 +72,8 @@ if classify_btn:
                 sentiment = result["sentiment"]
                 score = result["score"]
 
-                # Lưu vào DB (lưu theo text đã chuẩn hoá)
-                save_result(normalized_text, sentiment)
+                # Lưu vào DB (lưu theo câu gốc)
+                save_result(original_text, sentiment)
 
                 # ===== Hiển thị câu gốc & câu chuẩn hoá =====
                 st.subheader("Kết quả phân loại cảm xúc")
