@@ -17,7 +17,7 @@ init_db()
 
 # State cho lịch sử
 if "history_limit" not in st.session_state:
-    st.session_state["history_limit"] = 50  # mặc định 50 bản ghi
+    st.session_state["history_limit"] = 10  # mặc định 10 bản ghi gần nhất
 
 if "history_filter" not in st.session_state:
     st.session_state["history_filter"] = "ALL"  # ALL / POSITIVE / NEGATIVE / NEUTRAL
